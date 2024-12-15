@@ -1,0 +1,164 @@
+/* General container for the post listing */
+.report-archive-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Responsive 3-column grid layout */
+.newsroom-post-listing {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+    grid-template-rows: auto;
+    gap: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Single post item */
+.newsroom-post-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.newsroom-post-item:hover {
+   /* transform: scale(1.03); */
+}
+
+/* Post image */
+.newsroom-post-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Post details */
+.newsroom-post-details {
+    padding: 15px;
+}
+
+.newsroom-post-date {
+    font-size: 14px;
+    color: #999;
+}
+
+.newsroom-post-title a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.newsroom-post-title a:hover {
+    color: royalblue; /* Hover effect for post title */
+}
+
+/* Style the pagination container */
+.newsroom-universal-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Style for pagination ul */
+.newsroom-universal-pagination ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for pagination items */
+.newsroom-universal-pagination ul li {
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #003366;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Style for the selected (active) page */
+.newsroom-universal-pagination ul li.active {
+    background-color: #fff;
+    color: #003366;
+}
+
+/* Style for hover effect */
+.newsroom-universal-pagination ul li:hover {
+    background-color: #fff;
+    border-color: #bbb;
+}
+
+/* Style for inactive pagination arrows */
+.newsroom-universal-pagination ul li.inactive svg {
+    fill: #003366;
+    stroke: #003366;
+    opacity: 0.5;
+}
+
+/* Style for active pagination arrows */
+.newsroom-universal-pagination ul li.selected {
+    background-color: #003366;
+    color: #fff;
+}
+
+.newsroom-universal-pagination ul li.inactive {
+    cursor: default;
+}
+
+.newsroom-universal-pagination ul li.active svg,
+.newsroom-universal-pagination ul li.selected svg {
+    stroke: #fff;
+}
+
+a.newsroom-post-title {
+    text-decoration: none;
+    color: black;
+}
+
+.newsroom-main{
+	    margin-bottom: -199px !important;
+}
+
+/* Responsive styles for tablet (less than 768px) */
+@media screen and (max-width: 768px) {
+    .newsroom-post-listing {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        gap: 15px; /* Adjust gap for smaller screens */
+    }
+	.newsroom-main{
+	    margin-bottom: 1rem !important;
+	}
+}
+
+/* Responsive styles for mobile (less than 480px) */
+@media screen and (max-width: 480px) {
+    .newsroom-post-listing {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        gap: 10px; /* Adjust gap for smaller screens */
+    }
+    .newsroom-universal-pagination ul li {
+        width: 30px; /* Adjust pagination button size for mobile */
+        height: 30px;
+    }
+}
+@media (min-width: 992px) {
+    /* Your desktop-specific styles here */
+	.report-post-content {
+	width: 50%;
+	}
+}

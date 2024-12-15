@@ -1,0 +1,369 @@
+/* Add your CSS code here.
+
+For example:
+.example {
+    color: red;
+}
+
+For brushing up on your CSS knowledge, check out http://www.w3schools.com/css/css_syntax.asp
+
+End of comment */ 
+
+/* Reports Archive Container */
+/* Reports Archive Container */
+.report-archive-container {
+    margin: 0 auto;
+}
+
+/* Reports Archive Title */
+.report-title {
+    font-size: 2rem;
+    color: #ffffff; /* White text for the title */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Report Filters (Dropdowns and Search) */
+.report-filters {
+    display: flex;
+    justify-content: space-between; /* Aligns items on left and right */
+    align-items: center; /* Vertically centers items */
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 34px;
+}
+
+/* Filter Left Section (Dropdowns) */
+.filter-left {
+    display: flex;
+    gap: 10px; /* Space between dropdowns */
+    flex-wrap: wrap;
+}
+
+.filter-dropdown {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff; /* White background for dropdown */
+}
+
+/* Filter Right Section (Search Bar) */
+.filter-right {
+    display: flex;
+    align-items: center; /* Center the search bar vertically */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    flex-grow: 1;
+    background: #ebecef;
+    position: relative;
+}
+
+.search-bar button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive Layout for Filters */
+@media (max-width: 768px) {
+    .report-filters {
+        flex-direction: column; /* Stack filters vertically on smaller screens */
+        align-items: center;
+    }
+
+    .filter-left, .filter-right {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Center dropdowns and search bar */
+        margin-bottom: 10px;
+    }
+
+    .filter-dropdown, .search-bar input {
+        width: 100%; /* Full width on mobile */
+        max-width: 400px;
+    }
+
+    .search-bar {
+        justify-content: center;
+    }
+
+    .search-bar button {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Posts List */
+.report-posts-list {
+    margin-top: -48px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+/*     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+/*     transition: transform 0.3s ease, box-shadow 0.3s ease; */
+}
+
+/* Post Item */
+.report-post {
+    display: flex;
+    justify-content: space-between; /* Aligns content to left and right */
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+/*     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+	border-bottom: 0.5px solid #dfe2e8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.report-post:hover {
+/*     transform: scale(1.02); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); */
+}
+
+.report-post-thumbnail img {
+    width: 100%;
+/* 	max-width: 200px;  */
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Post Content */
+.report-post-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.report-post-content a {
+        margin-top: 0;
+    color: #111111;
+    font-size: clamp(0.984rem, 0.984rem + ((1vw - 0.2rem) * 0.645), 1.5rem);
+}
+
+.report-post-category {
+    color: #666;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Download Link */
+.report-post-content a.download-link {
+    color: #ff0000; /* Red color for the download link */
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end; /* Aligns download link to the right */
+    margin-left: auto; /* Pushes the link to the right */
+	margin: -53px 0 0 0;
+}
+
+.report-post-content a.download-link:hover {
+    text-decoration: underline;
+}
+
+.report-post-content a i {
+    margin-left: 5px;
+}
+
+/* Responsive Layout for Post Items */
+@media (max-width: 768px) {
+    .report-post {
+        flex-direction: row;
+/*         text-align: center; */
+    }
+
+    .report-post-thumbnail {
+        margin-bottom: 15px;
+    }
+	
+	.report-post-thumbnail img {
+    width: 100%;
+    max-width: 566px; 
+    height: auto;
+    border-radius: 4px;
+}
+
+    .report-post-content a.download-link {
+        justify-content: flex-start;
+        margin-left: 0; /* Center align on smaller screens */
+		margin-top:15px;
+    }
+	.report-post {
+		display: block;align-content;
+	}
+}
+
+@media (max-width: 480px) {
+    .report-post-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .filter-dropdown, .search-bar input {
+        font-size: 0.9rem;
+    }
+
+    .search-bar button {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+/
+/* Filter Header Dropdown */
+.filter-header-dropdown {
+    border-radius: 5px;
+    max-width: 950px;
+    margin: 0 auto;
+    width: 100%;
+/*     position: absolute;
+    top: -175px; */
+}
+
+/* Search Bar Icon */
+.search-bar svg.search-icon {
+    position: absolute;
+    z-index: 1;
+    margin: 0 9px 0 187px;
+}
+
+.search-bar input::placeholder {
+    color: #000;    
+}
+.download-link svg{
+	width: 20px;
+}
+.main-header-group{
+	padding-bottom: 1rem !important;
+}
+.filter-title-heading{
+	margin-bottom: 1rem !important;
+}
+
+.cvf-universal-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cvf-universal-pagination ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cvf-universal-pagination ul li {
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #003366;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Style for the selected (active) page */
+.cvf-universal-pagination ul li.selected {
+    background-color: #fff;
+    color: #003366;
+}
+
+/* Style for hover effect */
+.cvf-universal-pagination ul li:hover {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+}
+
+/* Style for inactive pagination arrows */
+.cvf-universal-pagination ul li.inactive svg {
+    fill: #003366;
+    stroke: #003366;
+    opacity: 0.5;
+}
+
+/* Style for active pagination arrows */
+.cvf-universal-pagination ul li.active {
+    background-color: #003366;
+    color: #fff;
+}
+
+.cvf-universal-pagination ul li.inactive {
+    cursor: default;
+}
+
+.cvf-universal-pagination ul li.active svg,
+.cvf-universal-pagination ul li.selected svg {
+    stroke: #fff;
+}
+
+/* Hover Effect */
+/* .cvf-universal-pagination ul li:hover {
+    background-color: #003366;
+    color: white;
+} */
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+	.report-posts-list {
+    margin-top: -38px;
+	}
+    .cvf-universal-pagination ul li {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .cvf-universal-pagination ul li svg {
+        width: 15px;
+        height: 15px;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) 
+{
+	.report-post-content a.download-link {
+		margin: -22px 0 0 0;
+	}
+	
+}
+@media (max-width: 480px) {
+
+	.report-posts-list {
+		margin-top: -21px;
+	}
+    .cvf-universal-pagination ul li {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    .cvf-universal-pagination ul li svg {
+        width: 12px;
+        height: 12px;
+    }
+}
